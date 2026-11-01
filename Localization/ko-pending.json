@@ -1,0 +1,474 @@
+{
+  "Localizable": {
+    "%@ busy": {
+      "stringUnit": {
+        "state": "translated",
+        "value": "일정 %@"
+      }
+    },
+    "%lld events": {
+      "stringUnit": {
+        "state": "translated",
+        "value": "일정 %lld개"
+      }
+    },
+    "%lld more": {
+      "stringUnit": {
+        "state": "translated",
+        "value": "%lld개 더"
+      }
+    },
+    "(No Title)": {
+      "stringUnit": {
+        "state": "translated",
+        "value": "(제목 없음)"
+      }
+    },
+    "Add": {
+      "stringUnit": {
+        "state": "translated",
+        "value": "추가"
+      }
+    },
+    "Add Event": {
+      "stringUnit": {
+        "state": "translated",
+        "value": "일정 추가"
+      }
+    },
+    "All Day": {
+      "stringUnit": {
+        "state": "translated",
+        "value": "종일"
+      }
+    },
+    "Allow Minical in System Settings.": {
+      "stringUnit": {
+        "state": "translated",
+        "value": "시스템 설정에서 Minical을 허용하세요."
+      }
+    },
+    "Blue": {
+      "stringUnit": {
+        "state": "translated",
+        "value": "파란색"
+      }
+    },
+    "Calendar": {
+      "stringUnit": {
+        "state": "translated",
+        "value": "캘린더"
+      }
+    },
+    "Calendar access is off": {
+      "stringUnit": {
+        "state": "translated",
+        "value": "캘린더 접근이 꺼져 있음"
+      }
+    },
+    "Calendars": {
+      "stringUnit": {
+        "state": "translated",
+        "value": "캘린더"
+      }
+    },
+    "Cancel": {
+      "stringUnit": {
+        "state": "translated",
+        "value": "취소"
+      }
+    },
+    "Connect": {
+      "stringUnit": {
+        "state": "translated",
+        "value": "연결"
+      }
+    },
+    "Connect your calendars to show events.": {
+      "stringUnit": {
+        "state": "translated",
+        "value": "캘린더를 연결하면 일정이 표시됩니다."
+      }
+    },
+    "Day": {
+      "stringUnit": {
+        "state": "translated",
+        "value": "일"
+      }
+    },
+    "Free": {
+      "stringUnit": {
+        "state": "translated",
+        "value": "비어 있음"
+      }
+    },
+    "From %@": {
+      "stringUnit": {
+        "state": "translated",
+        "value": "%@부터"
+      }
+    },
+    "Go to Today": {
+      "stringUnit": {
+        "state": "translated",
+        "value": "오늘로 이동"
+      }
+    },
+    "Graphite": {
+      "stringUnit": {
+        "state": "translated",
+        "value": "그래파이트"
+      }
+    },
+    "Green": {
+      "stringUnit": {
+        "state": "translated",
+        "value": "초록색"
+      }
+    },
+    "Highlight Color": {
+      "stringUnit": {
+        "state": "translated",
+        "value": "강조 색상"
+      }
+    },
+    "Launch at Login": {
+      "stringUnit": {
+        "state": "translated",
+        "value": "로그인 시 실행"
+      }
+    },
+    "Midnight": {
+      "stringUnit": {
+        "state": "translated",
+        "value": "자정"
+      }
+    },
+    "Month": {
+      "stringUnit": {
+        "state": "translated",
+        "value": "월"
+      }
+    },
+    "More": {
+      "stringUnit": {
+        "state": "translated",
+        "value": "더 보기"
+      }
+    },
+    "New Event": {
+      "stringUnit": {
+        "state": "translated",
+        "value": "새로운 일정"
+      }
+    },
+    "Next": {
+      "stringUnit": {
+        "state": "translated",
+        "value": "다음"
+      }
+    },
+    "Next Month": {
+      "stringUnit": {
+        "state": "translated",
+        "value": "다음 달"
+      }
+    },
+    "Next · in %@": {
+      "stringUnit": {
+        "state": "translated",
+        "value": "다음 · %@ 후"
+      }
+    },
+    "No Events": {
+      "stringUnit": {
+        "state": "translated",
+        "value": "일정 없음"
+      }
+    },
+    "Noon": {
+      "stringUnit": {
+        "state": "translated",
+        "value": "정오"
+      }
+    },
+    "Nothing else today": {
+      "stringUnit": {
+        "state": "translated",
+        "value": "오늘 남은 일정 없음"
+      }
+    },
+    "Now · %@ left": {
+      "stringUnit": {
+        "state": "translated",
+        "value": "진행 중 · %@ 남음"
+      }
+    },
+    "Open Calendar": {
+      "stringUnit": {
+        "state": "translated",
+        "value": "캘린더 열기"
+      }
+    },
+    "Open in Calendar": {
+      "stringUnit": {
+        "state": "translated",
+        "value": "캘린더에서 열기"
+      }
+    },
+    "Orange": {
+      "stringUnit": {
+        "state": "translated",
+        "value": "주황색"
+      }
+    },
+    "Pink": {
+      "stringUnit": {
+        "state": "translated",
+        "value": "분홍색"
+      }
+    },
+    "Previous": {
+      "stringUnit": {
+        "state": "translated",
+        "value": "이전"
+      }
+    },
+    "Previous Month": {
+      "stringUnit": {
+        "state": "translated",
+        "value": "이전 달"
+      }
+    },
+    "Purple": {
+      "stringUnit": {
+        "state": "translated",
+        "value": "보라색"
+      }
+    },
+    "Quit Minical": {
+      "stringUnit": {
+        "state": "translated",
+        "value": "Minical 종료"
+      }
+    },
+    "Red": {
+      "stringUnit": {
+        "state": "translated",
+        "value": "빨간색"
+      }
+    },
+    "See your events here": {
+      "stringUnit": {
+        "state": "translated",
+        "value": "여기에서 일정을 확인하세요"
+      }
+    },
+    "Settings": {
+      "stringUnit": {
+        "state": "translated",
+        "value": "설정"
+      }
+    },
+    "Show Events": {
+      "stringUnit": {
+        "state": "translated",
+        "value": "일정 표시"
+      }
+    },
+    "System Accent": {
+      "stringUnit": {
+        "state": "translated",
+        "value": "시스템 강조 색상"
+      }
+    },
+    "System Default": {
+      "stringUnit": {
+        "state": "translated",
+        "value": "시스템 설정"
+      }
+    },
+    "Title": {
+      "stringUnit": {
+        "state": "translated",
+        "value": "제목"
+      }
+    },
+    "Today": {
+      "stringUnit": {
+        "state": "translated",
+        "value": "오늘"
+      }
+    },
+    "Tomorrow": {
+      "stringUnit": {
+        "state": "translated",
+        "value": "내일"
+      }
+    },
+    "Until %@": {
+      "stringUnit": {
+        "state": "translated",
+        "value": "%@까지"
+      }
+    },
+    "Week": {
+      "stringUnit": {
+        "state": "translated",
+        "value": "주"
+      }
+    },
+    "Week Starts On": {
+      "stringUnit": {
+        "state": "translated",
+        "value": "주 시작 요일"
+      }
+    },
+    "Yellow": {
+      "stringUnit": {
+        "state": "translated",
+        "value": "노란색"
+      }
+    },
+    "Yesterday": {
+      "stringUnit": {
+        "state": "translated",
+        "value": "어제"
+      }
+    },
+    "Your day is clear": {
+      "stringUnit": {
+        "state": "translated",
+        "value": "하루가 비어 있어요"
+      }
+    },
+    "Appearance": {
+      "stringUnit": {
+        "state": "translated",
+        "value": "모양"
+      }
+    },
+    "Appearance…": {
+      "stringUnit": {
+        "state": "translated",
+        "value": "모양…"
+      }
+    },
+    "Theme": {
+      "stringUnit": {
+        "state": "translated",
+        "value": "테마"
+      }
+    },
+    "Pane Color": {
+      "stringUnit": {
+        "state": "translated",
+        "value": "패널 색상"
+      }
+    },
+    "Strength": {
+      "stringUnit": {
+        "state": "translated",
+        "value": "강도"
+      }
+    },
+    "Highlight": {
+      "stringUnit": {
+        "state": "translated",
+        "value": "강조 색상"
+      }
+    },
+    "System": {
+      "stringUnit": {
+        "state": "translated",
+        "value": "시스템"
+      }
+    },
+    "Black": {
+      "stringUnit": {
+        "state": "translated",
+        "value": "블랙"
+      }
+    },
+    "Faded Glass": {
+      "stringUnit": {
+        "state": "translated",
+        "value": "페이드 글래스"
+      }
+    },
+    "Dusk Glass": {
+      "stringUnit": {
+        "state": "translated",
+        "value": "더스크 글래스"
+      }
+    },
+    "Liquid Glass": {
+      "stringUnit": {
+        "state": "translated",
+        "value": "리퀴드 글래스"
+      }
+    },
+    "Pane": {
+      "stringUnit": {
+        "state": "translated",
+        "value": "페인"
+      }
+    },
+    "Slate": {
+      "stringUnit": {
+        "state": "translated",
+        "value": "슬레이트"
+      }
+    },
+    "Ocean": {
+      "stringUnit": {
+        "state": "translated",
+        "value": "오션"
+      }
+    },
+    "Forest": {
+      "stringUnit": {
+        "state": "translated",
+        "value": "포레스트"
+      }
+    },
+    "Plum": {
+      "stringUnit": {
+        "state": "translated",
+        "value": "플럼"
+      }
+    },
+    "Wine": {
+      "stringUnit": {
+        "state": "translated",
+        "value": "와인"
+      }
+    },
+    "Ember": {
+      "stringUnit": {
+        "state": "translated",
+        "value": "엠버"
+      }
+    },
+    "Close": {
+      "stringUnit": {
+        "state": "translated",
+        "value": "닫기"
+      }
+    }
+  },
+  "InfoPlist": {
+    "NSCalendarsFullAccessUsageDescription": {
+      "stringUnit": {
+        "state": "translated",
+        "value": "메뉴 막대에서 다가오는 일정을 바로 보여주기 위해 캘린더 접근이 필요합니다."
+      }
+    },
+    "NSCalendarsUsageDescription": {
+      "stringUnit": {
+        "state": "translated",
+        "value": "메뉴 막대에서 다가오는 일정을 바로 보여주기 위해 캘린더 접근이 필요합니다."
+      }
+    }
+  }
+}

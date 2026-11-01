@@ -1,0 +1,71 @@
+name: Minical
+options:
+  bundleIdPrefix: com.jyun1004
+  deploymentTarget:
+    macOS: "14.0"
+  developmentLanguage: en
+  createIntermediateGroups: true
+packages:
+  Sparkle:
+    url: https://github.com/sparkle-project/Sparkle
+    from: "2.6.0"
+settings:
+  base:
+    SWIFT_VERSION: "6.0"
+    SWIFT_DEFAULT_ACTOR_ISOLATION: MainActor
+    SWIFT_APPROACHABLE_CONCURRENCY: YES
+    MARKETING_VERSION: "1.0.0"
+    CURRENT_PROJECT_VERSION: "1"
+    LOCALIZATION_PREFERS_STRING_CATALOGS: YES
+    SWIFT_EMIT_LOC_STRINGS: YES
+targets:
+  Minical:
+    type: application
+    platform: macOS
+    sources:
+      - path: Minical
+    dependencies:
+      - package: Sparkle
+    info:
+      path: Minical/Info.plist
+      properties:
+        CFBundleDisplayName: Minical
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        CFBundleDevelopmentRegion: en
+        CFBundleLocalizations: [en]
+        LSUIElement: true
+        LSApplicationCategoryType: public.app-category.productivity
+        NSHumanReadableCopyright: "© 2026 Minical"
+        NSCalendarsFullAccessUsageDescription: Minical shows your upcoming events right in the menu bar.
+        NSCalendarsUsageDescription: Minical shows your upcoming events right in the menu bar.
+        # Updates (Sparkle): the feed the release script publishes (scripts/release.sh), checked
+        # once a day without asking first, and the key its updates are signed with.
+        SUFeedURL: https://github.com/jyun1004/Minical/releases/latest/download/appcast.xml
+        SUPublicEDKey: NG/w1z3PhQQY3/hmVPeZ2Lxr+IkhBgnZUDQ5hojiq3Y=
+        SUEnableAutomaticChecks: true
+        SUScheduledCheckInterval: 86400
+        # Sandboxed: Sparkle installs the update through its own XPC service.
+        SUEnableInstallerLauncherService: true
+    entitlements:
+      path: Minical/Minical.entitlements
+      properties:
+        com.apple.security.app-sandbox: true
+        com.apple.security.personal-information.calendars: true
+        # Updates (Sparkle): the feed and the download, and its installer's XPC services.
+        com.apple.security.network.client: true
+        com.apple.security.temporary-exception.mach-lookup.global-name:
+          - com.jyun1004.Minical-spks
+          - com.jyun1004.Minical-spki
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.jyun1004.Minical
+        PRODUCT_NAME: Minical
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        # On for distribution only (scripts/release.sh, signed with a Developer ID): signed ad hoc,
+        # the hardened runtime won't load the embedded Sparkle framework (no team ID to match).
+        ENABLE_HARDENED_RUNTIME: NO
+        CODE_SIGN_STYLE: Manual
+        CODE_SIGN_IDENTITY: "-"
+        DEVELOPMENT_TEAM: ""
+        COMBINE_HIDPI_IMAGES: YES
