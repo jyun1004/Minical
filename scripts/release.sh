@@ -157,7 +157,9 @@ if [[ $publish == 1 ]]; then
         exit 1
     fi
     print "==> Publishing v$version to $repo"
-    gh release create "v$version" "$dmg" dist/appcast.xml --repo "$repo" --title "Minical $version" --notes ""
+    # Tagged at the commit built, which must be pushed.
+    gh release create "v$version" "$dmg" dist/appcast.xml --repo "$repo" --target "$(git rev-parse HEAD)" \
+        --title "Minical $version" --notes ""
 fi
 
 print "==> Done: $dmg"
