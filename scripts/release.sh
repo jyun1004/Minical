@@ -7,7 +7,9 @@
 #
 # version defaults to MARKETING_VERSION in project.yml. The build number is the time of the build.
 # --publish uploads both to a GitHub release v<version> of REPO, where the app's feed
-# (SUFeedURL in project.yml) finds them; the latest release is the one offered.
+# (SUFeedURL in project.yml) finds them; the latest release is the one offered. REPO holds only
+# releases, so the source repository can go private without cutting installed copies off their
+# updates. The commit built is tagged v<version> here.
 #
 # Needs, once:
 #   - a "Developer ID Application" certificate in the login keychain
@@ -18,7 +20,10 @@
 #   SIGN_IDENTITY   the signing identity (default: the first Developer ID Application one found).
 #                   "-" signs ad hoc and skips notarization, to try the packaging alone.
 #   NOTARY_PROFILE  the notarytool keychain profile (default minical-notary).
-#   REPO            the GitHub repository releases go to (default jyun1004/Minical).
+#   REPO            the GitHub repository releases go to (default jyun1004/Minical-releases).
+#   OLD_FEED_REPO   where 1.0.0 looks for updates (default jyun1004/Minical): the feed is also put
+#                   in a release there, so those copies find the new version and, with it, the new
+#                   feed. Set it empty once they're all updated, or before the source goes private.
 set -euo pipefail
 
 publish=0
@@ -33,7 +38,8 @@ export DEVELOPER_DIR="${DEVELOPER_DIR:-/Applications/Xcode.app/Contents/Develope
 version="${1:-$(sed -n 's/^ *MARKETING_VERSION: *"\(.*\)"/\1/p' project.yml)}"
 build="$(date +%Y%m%d%H%M)"
 notary_profile="${NOTARY_PROFILE:-minical-notary}"
-repo="${REPO:-jyun1004/Minical}"
+repo="${REPO:-jyun1004/Minical-releases}"
+old_feed_repo="${OLD_FEED_REPO-jyun1004/Minical}"
 sparkle_bin="$PWD/build/release/DerivedData/SourcePackages/artifacts/sparkle/Sparkle/bin"
 
 identity="${SIGN_IDENTITY:-$(security find-identity -v -p codesigning | sed -n 's/.*"\(Developer ID Application: .*\)"/\1/p' | head -1)}"
@@ -157,9 +163,14 @@ if [[ $publish == 1 ]]; then
         exit 1
     fi
     print "==> Publishing v$version to $repo"
-    # Tagged at the commit built, which must be pushed.
-    gh release create "v$version" "$dmg" dist/appcast.xml --repo "$repo" --target "$(git rev-parse HEAD)" \
+    gh release create "v$version" "$dmg" dist/appcast.xml --repo "$repo" \
         --title "Minical $version" --notes ""
+    if [[ -n "$old_feed_repo" ]]; then
+        print "==> Pointing the old feed in $old_feed_repo at it"
+        gh release create "v$version" dist/appcast.xml --repo "$old_feed_repo" --target "$(git rev-parse HEAD)" \
+            --title "Minical $version" --notes "Downloads: https://github.com/$repo/releases/latest"
+    fi
+    git tag -f "v$version" HEAD
 fi
 
 print "==> Done: $dmg"

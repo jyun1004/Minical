@@ -41,7 +41,7 @@ targets:
         NSCalendarsUsageDescription: Minical shows your upcoming events right in the menu bar.
         # Updates (Sparkle): the feed the release script publishes (scripts/release.sh), checked
         # once a day without asking first, and the key its updates are signed with.
-        SUFeedURL: https://github.com/jyun1004/Minical/releases/latest/download/appcast.xml
+        SUFeedURL: https://github.com/jyun1004/Minical-releases/releases/latest/download/appcast.xml
         SUPublicEDKey: NG/w1z3PhQQY3/hmVPeZ2Lxr+IkhBgnZUDQ5hojiq3Y=
         SUEnableAutomaticChecks: true
         SUScheduledCheckInterval: 86400
