@@ -48,8 +48,35 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         if arguments.contains("--open") {
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { [weak self] in self?.statusItemController?.show() }
         }
+        if arguments.contains("--demo") {
+            playDemo()
+        }
         #endif
     }
+
+    #if DEBUG
+    /// `--demo`: walks through the views and themes on its own, for recording the app's video.
+    private func playDemo() {
+        let model = model
+        let steps: [(TimeInterval, @MainActor () -> Void)] = [
+            (3.0, { model.moveSelection(byDays: 3) }),
+            (4.6, { model.navigate(1) }),
+            (6.0, { model.navigate(-1) }),
+            (7.6, { model.setMode(.week) }),
+            (9.4, { model.navigate(1) }),
+            (10.8, { model.navigate(-1) }),
+            (12.4, { model.setMode(.day) }),
+            (14.6, { model.showAppearanceForPreview(theme: .duskGlass, sheet: false) }),
+            (16.2, { model.showAppearanceForPreview(theme: .fadedGlass, sheet: false) }),
+            (17.8, { model.showAppearanceForPreview(theme: .liquidGlass, sheet: false) }),
+            (18.4, { model.setMode(.month) }),
+            (20.0, { model.goToToday() }),
+        ]
+        for (time, step) in steps {
+            DispatchQueue.main.asyncAfter(deadline: .now() + time) { MainActor.assumeIsolated(step) }
+        }
+    }
+    #endif
 
     #if DEBUG
     /// Shows the popover content in a regular window so it can be inspected and screenshotted.

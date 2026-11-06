@@ -4,11 +4,12 @@
 
 Today's date sits in the menu bar. Click it for your month, week or day at a glance, with your real events, in a panel that looks at home on macOS 26's Liquid Glass.
 
-<!-- Screenshot / GIF goes here: docs/minical.gif -->
+<p align="center"><img src="site/assets/minical.gif" width="380" alt="Minical's panel under its menu bar icon, switching between month, week and day views and between themes"></p>
 
-<p>
-  <a href="https://github.com/jyun1004/Minical-releases/releases/latest"><b>Download Minical</b></a>
-  · free · macOS 14 or later · Apple silicon and Intel
+<p align="center">
+  <a href="https://github.com/jyun1004/Minical-releases/releases/latest/download/Minical.dmg"><b>Download Minical</b></a> (free, macOS 14 or later, Apple silicon and Intel)
+  <br>
+  <a href="https://jyun1004.github.io/Minical-releases/">jyun1004.github.io/Minical-releases</a>
 </p>
 
 ## Features
@@ -23,11 +24,13 @@ Today's date sits in the menu bar. Click it for your month, week or day at a gla
 
 ## Install
 
-1. [Download the DMG](https://github.com/jyun1004/Minical-releases/releases/latest) and drag **Minical** to **Applications**.
+1. [Download the DMG](https://github.com/jyun1004/Minical-releases/releases/latest/download/Minical.dmg) and drag **Minical** to **Applications**.
 2. Open it. The date appears in the menu bar; click it.
 3. Allow calendar access when asked, so your events show up.
 
-Minical is signed and notarized by Apple, so it opens without warnings. It checks for updates once a day; you can also choose **Check for Updates…** from the `⋯` menu.
+The interface is in English; a Korean translation is on the way.
+
+Minical is signed with a Developer ID and notarized by Apple, so it opens without warnings. It checks for updates once a day; you can also choose **Check for Updates…** from the `⋯` menu.
 
 ## Privacy
 

@@ -588,8 +588,16 @@ final class PanelCardView: NSView {
         updateShadowPath()
     }
 
+    /// How far the shadow's shape starts below the card's top edge. The window leaves only a few
+    /// points above the card (it hangs just under the menu bar), so a shadow spreading up there would
+    /// be cut off by the window's edge and show as a faint band under the menu bar. Started lower,
+    /// it has faded out before it reaches the edge, and still falls along the sides and below.
+    private static let shadowTopInset: CGFloat = 22
+
     func updateShadowPath() {
-        layer?.shadowPath = CGPath(roundedRect: bounds, cornerWidth: cornerRadius, cornerHeight: cornerRadius, transform: nil)
+        var shape = bounds
+        shape.size.height = max(0, shape.height - Self.shadowTopInset)
+        layer?.shadowPath = CGPath(roundedRect: shape, cornerWidth: cornerRadius, cornerHeight: cornerRadius, transform: nil)
     }
 }
 

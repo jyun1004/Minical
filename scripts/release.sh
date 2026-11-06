@@ -163,7 +163,10 @@ if [[ $publish == 1 ]]; then
         exit 1
     fi
     print "==> Publishing v$version to $repo"
-    gh release create "v$version" "$dmg" dist/appcast.xml --repo "$repo" \
+    # Also as Minical.dmg, so .../releases/latest/download/Minical.dmg (the download page's link)
+    # always fetches the newest version.
+    cp "$dmg" dist/Minical.dmg
+    gh release create "v$version" "$dmg" dist/Minical.dmg dist/appcast.xml --repo "$repo" \
         --title "Minical $version" --notes ""
     if [[ -n "$old_feed_repo" ]]; then
         print "==> Pointing the old feed in $old_feed_repo at it"
